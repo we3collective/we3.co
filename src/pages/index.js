@@ -1,45 +1,34 @@
 import * as React from 'react';
 import { css } from '@emotion/react';
 
+import { Header } from '../components';
+
 import '../css/global.css';
-import we3Image from '../images/we3.svg';
-import heroImg from '../images/banner.png';
+import featuredNFTImage from '../images/banner.png';
 
-const grid = css`
-  margin-top: 117px;
+const pageGrid = css`
   display: grid;
-  grid-template-columns: minmax(64px, 1fr) minmax(0, 1200px) minmax(64px, 1fr);
-
-  h1 {
-    font-size: 44px;
-    font-weight: 200;
-  }
-
-  h2 {
-    font-size: 20px;
-    font-weight: 700;
-    text-transform: uppercase;
-  }
+  grid-template-columns: minmax(0px, 1fr) minmax(0, 1440px) minmax(0px, 1fr);
 `;
 
-const gridColumn = css`
+const pageGridColumn = css`
   grid-column: 2 / 3;
 `;
 
-const title = css`
-  display: flex;
-  flex-flow: row nowrap;
-  justify-content: flex-start;
-  align-items: center;
-  margin-bottom: 44px;
+const contentGrid = css`
+  display: grid;
+  grid-template-columns: 100px minmax(0, 1fr) 100px;
 `;
 
-const we3 = css`
-  height: 36px;
-  margin-right: 64px;
+const contentGridColumn = css`
+  grid-column: 2 / 3;
 `;
 
-const hero = css`
+const featuredNFTGridColumn = css`
+  grid-column: 1 / 4;
+`;
+
+const featuredNFT = css`
   width: 100%;
 `;
 
@@ -60,19 +49,27 @@ const weAre = css`
   }
 `;
 
+
 const IndexPage = () => {
   return (
-    <main css={grid}>
-      <div css={gridColumn}>
-        <div css={title}>
-          <img css={we3} src={we3Image}></img>
-          <h1>We are a design collective building Web3</h1>
-        </div>
-        <img css={hero} src={heroImg}></img>
-        <div css={weAre}>
-          <h2>Who we are</h2>
-          <h1>We are a new kind of design organization partnering with teams to work on web 3.0. projects.</h1>
-          <h1>We believe internet platforms should be more participative, open, and community owned.</h1>
+    <main>
+      <div css={pageGrid}>
+        <div css={pageGridColumn}>
+          <div css={contentGrid}>
+            <div css={contentGridColumn}>
+              <Header />
+            </div>
+            <div css={featuredNFTGridColumn}>
+              <img css={featuredNFT} src={featuredNFTImage}></img>
+            </div>
+            <div css={contentGridColumn}>
+              <div css={weAre}>
+                <h2>Who we are</h2>
+                <h1>We are a new kind of design organization partnering with teams to work on web 3.0. projects.</h1>
+                <h1>We believe internet platforms should be more participative, open, and community owned.</h1>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </main>
