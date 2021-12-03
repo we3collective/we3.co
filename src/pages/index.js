@@ -1,35 +1,13 @@
 import * as React from 'react';
 import { css } from '@emotion/react';
 
-import { Header } from '../components';
-
 import '../css/global.css';
-import featuredNFTImage from '../images/banner.png';
 
-const pageGrid = css`
-  display: grid;
-  grid-template-columns: minmax(0px, 1fr) minmax(0, 1440px) minmax(0px, 1fr);
-`;
+import { Header, FeaturedNFT } from '../components';
+import {pageGrid, pageGridColumn, contentGrid, contentGridColumn } from '../css/global';
 
-const pageGridColumn = css`
-  grid-column: 2 / 3;
-`;
-
-const contentGrid = css`
-  display: grid;
-  grid-template-columns: 100px minmax(0, 1fr) 100px;
-`;
-
-const contentGridColumn = css`
-  grid-column: 2 / 3;
-`;
-
-const featuredNFTGridColumn = css`
-  grid-column: 1 / 4;
-`;
-
-const featuredNFT = css`
-  width: 100%;
+const container = css`
+  margin-bottom: 300px;
 `;
 
 const weAre = css`
@@ -53,15 +31,13 @@ const weAre = css`
 const IndexPage = () => {
   return (
     <main>
-      <div css={pageGrid}>
+      <div css={[pageGrid, container]}>
         <div css={pageGridColumn}>
           <div css={contentGrid}>
             <div css={contentGridColumn}>
               <Header />
             </div>
-            <div css={featuredNFTGridColumn}>
-              <img css={featuredNFT} src={featuredNFTImage}></img>
-            </div>
+            <FeaturedNFT />
             <div css={contentGridColumn}>
               <div css={weAre}>
                 <h2>Who we are</h2>
