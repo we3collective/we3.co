@@ -10,7 +10,7 @@ export const pageGrid = css`
 `;
 
 export const pageGridColumn = css`
-  grid-column: 2 / 3;
+  grid-column: 2/3;
 `;
 
 export const contentGrid = css`
@@ -19,7 +19,11 @@ export const contentGrid = css`
 `;
 
 export const contentGridColumn = css`
-  grid-column: 2 / 3;
+  grid-column: 2/3;
+`;
+
+export const contentGridBleed = css`
+  grid-column: 1/4;
 `;
 
 // Styles
