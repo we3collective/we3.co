@@ -1,6 +1,8 @@
 import * as React from 'react';
 import { css } from '@emotion/react';
 
+import { label, headlineFont } from '../css/global';
+
 import we3Logo from '../images/we3.svg';
 
 const header = css`
@@ -18,7 +20,6 @@ const logo = css`
 
 const title = css`
   grid-column: 3 / 4;
-  font-family: EditorialNew;
   font-weight: 300;
   font-size: 40px;
   margin-top: 4px;
@@ -26,18 +27,14 @@ const title = css`
 
 const join = css`
   grid-column: 5 / 6;
-  font-family: NeueMontreal;
-  font-weight: 400;
-  font-size: 20px;
-  text-transform: uppercase;
 `;
 
 const HeaderComponent = () => {
   return (
     <div css={header}>
       <img css={logo} src={we3Logo}></img>
-      <h1 css={title}>We are a design collective building Web3</h1>
-      <h2 css={join}>join us</h2>
+      <h1 css={[title, headlineFont]}>We are a design collective building Web3</h1>
+      <h2 css={[join, label]}>join us</h2>
     </div>
   )
 }

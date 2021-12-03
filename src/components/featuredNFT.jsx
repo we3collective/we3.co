@@ -7,7 +7,7 @@ import { contentMargin, pageGridColumn } from '../css/global';
 const featuredNFTGrid = css`
   display: grid;
   grid-template-columns: ${contentMargin} 1fr auto ${contentMargin};
-  grid-template-rows: 1fr auto;
+  grid-template-rows: 1fr 50px;
 `;
 
 const featuredNFT = css`

@@ -3,7 +3,7 @@ import { css } from '@emotion/react';
 
 import '../css/global.css';
 
-import { Header, FeaturedNFT } from '../components';
+import { Header, FeaturedNFT, WhoWeAre } from '../components';
 import {pageGrid, pageGridColumn, contentGrid, contentGridColumn } from '../css/global';
 
 const container = css`
@@ -39,11 +39,7 @@ const IndexPage = () => {
             </div>
             <FeaturedNFT />
             <div css={contentGridColumn}>
-              <div css={weAre}>
-                <h2>Who we are</h2>
-                <h1>We are a new kind of design organization partnering with teams to work on web 3.0. projects.</h1>
-                <h1>We believe internet platforms should be more participative, open, and community owned.</h1>
-              </div>
+              <WhoWeAre />
             </div>
           </div>
         </div>

@@ -1,5 +1,7 @@
 import { css } from '@emotion/react';
 
+// Grids and layout
+
 export const contentMargin = `100px`;
 
 export const pageGrid = css`
@@ -20,3 +22,18 @@ export const contentGridColumn = css`
   grid-column: 2 / 3;
 `;
 
+// Styles
+
+export const label = css`
+  font-family: 'NeueMontreal', sans-serif;
+  font-weight: 400;
+  font-size: 20px;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+`;
+
+// Global fonts
+
+export const headlineFont = css`
+  font-family: EditorialNew;
+`;
