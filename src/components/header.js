@@ -3,7 +3,7 @@ import { css } from '@emotion/react';
 
 import { label, headlineFont } from '../css/global';
 
-import we3Logo from '../images/we3.svg';
+import we3Logo from '../images/logos/we3.svg';
 
 const header = css`
   display: grid;

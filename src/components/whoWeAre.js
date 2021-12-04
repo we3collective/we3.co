@@ -3,10 +3,10 @@ import { css } from '@emotion/react';
 
 import { label, headlineFont } from '../css/global';
 
-import we3LogoImg from '../images/we3Vertical.svg';
-import twitterImg from '../images/twitter.svg';
-import discordImg from '../images/discord.svg';
-import mediumImg from '../images/medium.svg';
+import we3LogoImg from '../images/logos/we3Vertical.svg';
+import twitterImg from '../images/logos/twitter.svg';
+import discordImg from '../images/logos/discord.svg';
+import mediumImg from '../images/logos/medium.svg';
 
 const container = css`
   margin-top: 48px;
