@@ -22,6 +22,14 @@
   src: url('../fonts/PPNeueMontreal-Regular.woff2') format('woff2');
 }
 
+@font-face {
+  font-family: 'NeueMontreal';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url('../fonts/PPNeueMontreal-Bold.woff2') format('woff2');
+}
+
 body {
   font-family: 'NeueMontreal', sans-serif;
   font-weight: 400;

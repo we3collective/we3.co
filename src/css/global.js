@@ -36,6 +36,14 @@ export const label = css`
   text-transform: uppercase;
 `;
 
+export const link = css`
+  font-family: 'NeueMontreal', sans-serif;
+  font-weight: 700;
+  font-size: 14px;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+`;
+
 // Global fonts
 
 export const headlineFont = css`

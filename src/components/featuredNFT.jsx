@@ -2,7 +2,7 @@ import * as React from 'react';
 import { css } from '@emotion/react';
 
 import src from '../images/banner.png';
-import { contentMargin } from '../css/global';
+import { link, contentMargin } from '../css/global';
 
 const featuredNFTGrid = css`
   display: grid;
@@ -30,9 +30,8 @@ const artistContainer = css`
   padding: 10px 16px;
 `;
 
-const link = css`
+const viewNFT = css`
   margin-left: 26px;
-  text-transform: uppercase;
 `;
 
 const FeaturedNFT = () => {
@@ -43,7 +42,7 @@ const FeaturedNFT = () => {
       </div>
       <div css={artistContainer}>
         <p>Made by charlota.eth
-          <span css={link}>view nft 😭</span>
+          <span css={[viewNFT, link]}>view nft</span>
         </p>
       </div>
     </div>

@@ -9,7 +9,6 @@ const header = css`
   display: grid;
   grid-template-columns: auto 77px auto 1fr auto;
   height: 154px;
-  justify-content: flex-start;
   align-items: center;
 `;
 
