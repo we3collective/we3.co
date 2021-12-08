@@ -1,13 +1,14 @@
 import * as React from 'react';
 import { css } from '@emotion/react';
 
-import nft1 from '../images/featuredNFTs/charlota.jpg';
-import nft2 from '../images/featuredNFTs/snehaSanks.png';
-import nft3 from '../images/featuredNFTs/snehaSanks2.png';
+import placeholder from '../images/featuredNFTs/placeholder.png';
+import nft0 from '../images/featuredNFTs/charlota.jpg';
+import nft1 from '../images/featuredNFTs/snehaSanks.png';
+import nft2 from '../images/featuredNFTs/snehaSanks2.png';
 
 import { link, contentMargin, featuredNFTGrid } from '../css/global';
 
-const nfts = [nft1, nft2, nft3];
+const nfts = [nft0, nft1, nft2];
 const creators = ['charlota.eth', 'Sneha Sanks', 'Sneha Sanks'];
 
 const featuredNFT = css`
@@ -51,13 +52,25 @@ const viewNFT = css`
 
 // <span css={[viewNFT, link]}>view nft</span>
 
-
 class FeaturedNFT extends React.Component {
   constructor(props) {
     super(props);
 
+    this.state = { 
+      nft: placeholder, 
+      creator: '',
+      mounted: false 
+    };
+  }
+
+  componentDidMount() {
     const idx = Math.floor(Math.random()*nfts.length);
-    this.state = { nft: nfts[idx], creator: creators[idx] };
+
+    this.setState({
+      mounted: true,
+      creator: creators[idx],
+      nft: nfts[idx],
+    });
   }
 
   render() {
@@ -66,9 +79,12 @@ class FeaturedNFT extends React.Component {
         <div css={featuredNFT}>
           <div><img css={featuredNFTImg} src={this.state.nft}></img></div>
         </div>
-        <div css={artistContainer}>
-          <p>Made by {this.state.creator}</p>
-        </div>
+
+        {this.state.mounted &&
+          <div css={artistContainer}>
+            <p>Made by {this.state.creator}</p>
+          </div>
+        }
       </div>
     )
   }
