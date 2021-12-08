@@ -103,15 +103,14 @@ const Footer = () => {
     <div css={[footer, pageGrid]}>
       <div css={[pageGridColumn, contentGrid]}>
         <div css={[container, contentGridColumn]}>
-
-          <h1 css={[email, headlineFont]}>gm@we3.co</h1>
-   
-          <div css={twitterItem}>
-            <img css={[twitterIcon, hideMobile]} src={twitterImgLarge} />
-            <img css={[twitterIcon, onlyMobile]} src={twitterImgWhite} />
-            <p css={link}>Follow</p>
-          </div>
-         
+          <h1 css={[email, headlineFont]}><a href="mailto:gm@we3.co">gm@we3.co</a></h1>
+          <a href="https://twitter.com/WE3co">
+            <div css={twitterItem}>
+              <img css={[twitterIcon, hideMobile]} src={twitterImgLarge} />
+              <img css={[twitterIcon, onlyMobile]} src={twitterImgWhite} />
+              <p css={link}>Follow</p>
+            </div>
+          </a>
         </div>
       </div>
     </div>

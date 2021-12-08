@@ -74,9 +74,9 @@ const Funding = () => {
     <div css={container}>
       <h1 css={[title, label]}>funding and support</h1>
       <div css={logos}>
-        <img css={logo} src={ideoImg} />
-        <img css={[logo, delphi]} src={delphiImg} />
-        <img css={logo} src={nearImg} />
+        <a href="https://ideo.com"><img css={logo} src={ideoImg} /></a>
+        <a href="https://delphidigital.io/labs"><img css={[logo, delphi]} src={delphiImg} /></a>
+        <a href="https://near.org/"><img css={logo} src={nearImg} /></a>
       </div>
     </div>
   )

@@ -74,7 +74,7 @@ const HeaderComponent = () => {
     <div css={header}>
       <img css={logo} src={we3Logo}></img>
       <h1 css={[title, headlineFont]}>We are a design collective building Web3</h1>
-      <h2 css={[join, label]}>join us</h2>
+      <h2 css={[join, label]}><a href="https://hello.we3.co">join us</a></h2>
     </div>
   )
 }

@@ -116,17 +116,17 @@ const WhoWeAre = () => {
       <div css={header}>
         <h1 css={[title, label]}>who we are</h1>
         <div css={[socialLinks, hideMobile]}>
-          <img css={socialIcon} src={twitterImg} />
-          <img css={socialIcon} src={discordImg} />
-          <img css={socialIcon} src={mediumImg} />
+          <a href="https://twitter.com/WE3co">
+            <img css={socialIcon} src={twitterImg} />
+          </a>
         </div>
       </div>
 
       <div css={body}>
         <div css={[copy, headlineFont]}>
-          <p css={para}>We’re a new kind of design organization partnering with ambitious teams to work on the new internet.</p>
+          <p css={para}>We’re a new kind of design organization, partnering with ambitious teams to work on the next internet.</p>
           <p css={para}>We believe internet platforms should be more participative, open, and community owned.</p>
-          <p css={para}>We bring an excellence of craft, willingness to experiment, collaborative mindset and passion for building.</p>
+          <p css={para}>We bring excellence of craft, willingness to experiment, and a passion for building.</p>
         </div>
         <div css={[logoContainer, hideMobile]}>
           <img css={logo} src={we3LogoImg} />

@@ -1,8 +1,14 @@
 import * as React from 'react';
 import { css } from '@emotion/react';
 
-import src from '../images/banner.png';
+import nft1 from '../images/featuredNFTs/charlota.jpg';
+import nft2 from '../images/featuredNFTs/snehaSanks.png';
+import nft3 from '../images/featuredNFTs/snehaSanks2.png';
+
 import { link, contentMargin, featuredNFTGrid } from '../css/global';
+
+const nfts = [nft1, nft2, nft3];
+const creators = ['charlota.eth', 'Sneha Sanks', 'Sneha Sanks'];
 
 const featuredNFT = css`
   grid-column: 1/5;
@@ -43,19 +49,29 @@ const viewNFT = css`
   margin-left: 26px;
 `;
 
-const FeaturedNFT = () => {
-  return (
-    <div css={featuredNFTGrid}>
-      <div css={featuredNFT}>
-        <div><img css={featuredNFTImg} src={src}></img></div>
+// <span css={[viewNFT, link]}>view nft</span>
+
+
+class FeaturedNFT extends React.Component {
+  constructor(props) {
+    super(props);
+
+    const idx = Math.floor(Math.random()*nfts.length);
+    this.state = { nft: nfts[idx], creator: creators[idx] };
+  }
+
+  render() {
+    return (
+      <div css={featuredNFTGrid}>
+        <div css={featuredNFT}>
+          <div><img css={featuredNFTImg} src={this.state.nft}></img></div>
+        </div>
+        <div css={artistContainer}>
+          <p>Made by {this.state.creator}</p>
+        </div>
       </div>
-      <div css={artistContainer}>
-        <p>Made by charlota.eth
-          <span css={[viewNFT, link]}>view nft</span>
-        </p>
-      </div>
-    </div>
-  )
+    )
+  }
 }
 
 export default FeaturedNFT;
