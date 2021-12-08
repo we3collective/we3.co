@@ -7,6 +7,10 @@ import { link, contentMargin, featuredNFTGrid } from '../css/global';
 const featuredNFT = css`
   grid-column: 1/5;
   grid-row: 1/3;
+
+  @media (max-width: 480px) {
+    grid-column: 1/4;
+  }
 `;
 
 const featuredNFTImg = css`
@@ -24,7 +28,14 @@ const artistContainer = css`
   padding: 10px 16px;
 
   @media (max-width: 768px) {
+    padding: 8px 12px;
     font-size: 12px;
+  }
+
+  @media (max-width: 480px) {
+    font-size: 8px;
+    padding: 6px 10px;
+    grid-column: 2/3;
   }
 `;
 

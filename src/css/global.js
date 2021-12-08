@@ -17,6 +17,10 @@ export const contentGrid = css`
   display: grid;
   grid-template-columns: minmax(16px, ${contentMargin}) 1fr minmax(16px, ${contentMargin});
 
+  @media (max-width: 4768px) {
+    grid-template-columns: 32px 1fr 32px;
+  }
+
   @media (max-width: 480px) {
     grid-template-columns: 16px 1fr 16px;
   }
@@ -38,6 +42,10 @@ export const featuredNFTGrid = css`
   @media (max-width: 1024px) {
     grid-template-columns: minmax(0, 32px) auto auto minmax(0, 32px);
   }
+
+  @media (max-width: 480px) {
+    grid-template-columns: 1fr auto 1fr;
+  }
 `;
 
 // Styles
@@ -51,7 +59,10 @@ export const label = css`
 
   @media (max-width: 1024px) {
     font-size: 16px;
-    letter-spacing: 0.02em;
+  }
+
+  @media (max-width: 480px) {
+    font-size: 14px;
   }
 `;
 
@@ -64,7 +75,10 @@ export const link = css`
 
   @media (max-width: 768px) {
     font-size: 12px;
-    letter-spacing: 0.01em;
+  }
+
+  @media (max-width: 480px) {
+    font-size: 8px;
   }
 `;
 

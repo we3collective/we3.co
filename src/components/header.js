@@ -19,6 +19,10 @@ const header = css`
     height: 96px;
     grid-template-columns: auto 16px auto minmax(16px, 1fr) auto;
   }
+
+  @media (max-width: 480px) {
+    height: 80px;
+  }
 `;
 
 const logo = css`
@@ -31,6 +35,10 @@ const logo = css`
 
   @media (max-width: 768px) {
     height: 18px;
+  }
+
+  @media (max-width: 480px) {
+    height: 15px;
   }
 `;
 
@@ -47,6 +55,11 @@ const title = css`
 
   @media (max-width: 768px) {
     font-size: 20px;
+    min-width: auto;
+  }
+
+  @media (max-width: 480px) {
+    font-size: 18px;
     min-width: auto;
   }
 `;

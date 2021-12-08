@@ -8,8 +8,6 @@ import {
   pageGridColumn, 
   contentGrid, 
   contentGridColumn,
-  hideMobile,
-  onlyMobile
 } from '../css/global';
 
 import twitterImgLarge from '../images/logos/twitterLarge.svg';
@@ -21,9 +19,14 @@ const footer = css`
   color: #ffffff;
   height: 266px;
 
+  @media (max-width: 768px) {
+    margin-top: 48px;
+    height: 96px;
+  }
+
   @media (max-width: 480px) {
     margin-top: 32px;
-    height: auto;
+    height: 74px;
   }
 `;
 
@@ -31,20 +34,18 @@ const container = css`
   display: grid;
   grid-template-columns: 1fr auto;
   align-items: center;
-
-  @media (max-width: 480px) {
-    display: flex;
-    flex-flow: column nowrap;
-  }
 `;
 
 const email = css`
   grid-column: 1/2;
   font-size: 60px;
 
+  @media (max-width: 768px) {
+    font-size: 24px;
+  }
+
   @media (max-width: 480px) {
     font-size: 18px;
-    margin-top: 32px;
   }
 `;
 
@@ -53,16 +54,20 @@ const twitterItem = css`
   display: flex;
   flex-flow: column nowrap;
   align-items: center;
-  height: 103px;
 
   & p {
     margin-top: 14px;
   }
 
-  @media (max-width: 480px) {
-    margin-top: 16px;
+  @media (max-width: 768px) {
     & p {
-      margin-top: 8px;
+      margin-top: 4px;
+    }
+  }
+
+  @media (max-width: 480px) {
+    & p {
+      margin-top: 4px;
     }
   }
 `;
@@ -70,8 +75,26 @@ const twitterItem = css`
 const twitterIcon = css`
   height: 103px;
 
+  @media (max-width: 768px) {
+    height: 24px;
+  }
+
   @media (max-width: 480px) {
-    height: 32px;
+    height: 20px;
+  }
+`;
+
+export const onlyMobile = css`
+  display: none;
+  @media (max-width: 768px) {
+    display: initial;
+  }
+`;
+
+export const hideMobile = css`
+  display: initial;
+  @media (max-width: 768px) {
+    display: none;
   }
 `;
 

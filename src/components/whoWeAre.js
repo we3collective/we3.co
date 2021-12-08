@@ -10,6 +10,10 @@ import mediumImg from '../images/logos/medium.svg';
 
 const container = css`
   margin-top: 48px;
+
+  @media (max-width: 480px) {
+    margin-top: 32px;
+  }
 `;
 
 const header = css`
@@ -71,15 +75,24 @@ const copy = css`
   }
 
   @media (max-width: 768px) {
-    font-size: 28px;
+    font-size: 25px;
+  }
+
+  @media (max-width: 480px) {
+    font-size: 22px;
   }
 `;
 
 const para = css`
   margin-top: 48px;
 
+  @media (max-width: 768px) {
+    margin-top: 32px;
+  }
+
   @media (max-width: 480px) {
     text-align: center;
+    margin-top: 24px;
   }
 `;
 
@@ -102,7 +115,7 @@ const WhoWeAre = () => {
       
       <div css={header}>
         <h1 css={[title, label]}>who we are</h1>
-        <div css={socialLinks}>
+        <div css={[socialLinks, hideMobile]}>
           <img css={socialIcon} src={twitterImg} />
           <img css={socialIcon} src={discordImg} />
           <img css={socialIcon} src={mediumImg} />
