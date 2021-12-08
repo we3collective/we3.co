@@ -3,7 +3,7 @@ import { css } from '@emotion/react';
 
 import { label, headlineFont } from '../css/global';
 
-import ideoImg from '../images/logos/ideo.svg';
+import icvImg from '../images/logos/icv.svg';
 import delphiImg from '../images/logos/delphi.svg';
 import nearImg from '../images/logos/near.svg';
 
@@ -35,12 +35,13 @@ const logos = css`
   }
 
   @media (max-width: 480px) {
-    margin-top: 32px;
+    margin-top: 14px;
     flex-flow: column nowrap;
     max-width: initial;
   }
 `;
 
+// default, but at this point is just NEAR
 const logo = css`
   height: 27px;
 
@@ -49,10 +50,7 @@ const logo = css`
   }
 
   @media (max-width: 480px) {
-    &:not(:first-child) {
-      margin-top: 8px;
-    }
-
+    margin-top: 12px;
     height: 13px;
   }
 `;
@@ -69,12 +67,24 @@ const delphi = css`
   }
 `;
 
+const icv = css`
+  height: 66px;
+
+  @media (max-width: 768px) {
+    height: 40px;
+  }
+
+  @media (max-width: 480px) {
+    height: 32px;
+  }
+`;
+
 const Funding = () => {
   return (
     <div css={container}>
       <h1 css={[title, label]}>funding and support</h1>
       <div css={logos}>
-        <a href="https://ideo.com"><img css={logo} src={ideoImg} /></a>
+        <a href="https://www.ideocolab.com/"><img css={[logo, icv]} src={icvImg} /></a>
         <a href="https://delphidigital.io/labs"><img css={[logo, delphi]} src={delphiImg} /></a>
         <a href="https://near.org/"><img css={logo} src={nearImg} /></a>
       </div>
