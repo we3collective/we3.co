@@ -11,11 +11,22 @@ const container = css`
   margin-top: 100px;
 `;
 
+const title = css`
+  @media (max-width: 480px) {
+    text-align: center;
+  }
+`;
+
 const logos = css`
   margin-top: 60px;
   display: flex;
-  flex-flow: row-nowrap;
+  flex-flow: row nowrap;
   align-items: center;
+
+  @media (max-width: 480px) {
+    margin-top: 32px;
+    flex-flow: column nowrap;
+  }
 `;
 
 const logo = css`
@@ -23,6 +34,15 @@ const logo = css`
 
   &:not(:first-child) {
     margin-left: 71px;
+  }
+
+  @media (max-width: 480px) {
+    &:not(:first-child) {
+      margin-left: 0px;
+      margin-top: 16px;
+    }
+
+    height: 16px;
   }
 `;
 
@@ -33,7 +53,7 @@ const delphi = css`
 const Funding = () => {
   return (
     <div css={container}>
-      <h1 css={label}>funding and support</h1>
+      <h1 css={[title, label]}>funding and support</h1>
       <div css={logos}>
         <img css={logo} src={ideoImg} />
         <img css={[logo, delphi]} src={delphiImg} />

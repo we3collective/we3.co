@@ -7,14 +7,31 @@ import we3Logo from '../images/logos/we3.svg';
 
 const header = css`
   display: grid;
-  grid-template-columns: auto 77px auto 1fr auto;
+  grid-template-columns: auto minmax(16px, 77px) auto minmax(32px, 1fr) auto;
   height: 154px;
   align-items: center;
+
+  @media (max-width: 1024px) {
+    height: 128px;
+  }
+
+  @media (max-width: 768px) {
+    height: 96px;
+    grid-template-columns: auto 16px auto minmax(16px, 1fr) auto;
+  }
 `;
 
 const logo = css`
   grid-column: 1 / 2;
   height: 36px;
+
+  @media (max-width: 1024px) {
+    height: 26px;
+  }
+
+  @media (max-width: 768px) {
+    height: 18px;
+  }
 `;
 
 const title = css`
@@ -22,10 +39,21 @@ const title = css`
   font-weight: 300;
   font-size: 40px;
   margin-top: 4px;
+  min-width: max-content;
+
+  @media (max-width: 1024px) {
+    font-size: 28px;
+  }
+
+  @media (max-width: 768px) {
+    font-size: 20px;
+    min-width: auto;
+  }
 `;
 
 const join = css`
   grid-column: 5 / 6;
+  min-width: max-content;
 `;
 
 const HeaderComponent = () => {

@@ -1,7 +1,7 @@
 import * as React from 'react';
 import { css } from '@emotion/react';
 
-import { label, headlineFont } from '../css/global';
+import { label, headlineFont, hideMobile } from '../css/global';
 
 import we3LogoImg from '../images/logos/we3Vertical.svg';
 import twitterImg from '../images/logos/twitter.svg';
@@ -16,14 +16,30 @@ const header = css`
   display: grid;
   grid-template-columns: auto 1fr auto;
   align-items: center;
+
+  @media (max-width: 480px) {
+    grid-template-columns: 1fr auto 1fr;
+    grid-template-rows: auto auto;
+  }
 `;
 
 const title = css`
-  grid-column: 1 / 2;
+  grid-column: 1/2;
+
+  @media (max-width: 480px) {
+    grid-column: 2/3;
+    grid-row: 2/3;
+    text-align: center;
+  }
 `;
 
 const socialLinks = css`
-  grid-column: 3 / 4;
+  grid-column: 3/4;
+
+  @media (max-width: 480px) {
+    grid-column: 2/3;
+    grid-row: 1/2;
+  }
 `;
 
 const socialIcon = css`
@@ -36,8 +52,12 @@ const socialIcon = css`
 
 const body = css`
   display: grid;
-  grid-template-columns: minmax(0px, 850px) 1fr auto;
+  grid-template-columns: minmax(0px, 850px) minmax(32px, 1fr) auto;
   align-items: center;
+
+  @media (max-width: 480px) {
+    grid-template-columns: auto;
+  }
 `;
 
 const copy = css`
@@ -45,15 +65,35 @@ const copy = css`
   font-size: 54px;
   font-weight: 300;
   line-height: 130%;
+
+  @media (max-width: 1024px) {
+    font-size: 40px;
+  }
+
+  @media (max-width: 768px) {
+    font-size: 28px;
+  }
 `;
 
 const para = css`
   margin-top: 48px;
+
+  @media (max-width: 480px) {
+    text-align: center;
+  }
+`;
+
+const logoContainer = css`
+  grid-column: 3 / 4;
 `;
 
 const logo = css`
-  grid-column: 3 / 4;
-  height: 36px;
+grid-column: 3 / 4;
+  height: 124px;
+
+  @media (max-width: 768px) {
+    height: 80px;
+  }
 `;
 
 const WhoWeAre = () => {
@@ -75,8 +115,8 @@ const WhoWeAre = () => {
           <p css={para}>We believe internet platforms should be more participative, open, and community owned.</p>
           <p css={para}>We bring an excellence of craft, willingness to experiment, collaborative mindset and passion for building.</p>
         </div>
-        <div css={logo}>
-          <img src={we3LogoImg} />
+        <div css={[logoContainer, hideMobile]}>
+          <img css={logo} src={we3LogoImg} />
         </div>
       </div>
 

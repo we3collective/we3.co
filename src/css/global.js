@@ -2,7 +2,7 @@ import { css } from '@emotion/react';
 
 // Grids and layout
 
-export const contentMargin = `100px`;
+const contentMargin = `100px`;
 
 export const pageGrid = css`
   display: grid;
@@ -15,7 +15,11 @@ export const pageGridColumn = css`
 
 export const contentGrid = css`
   display: grid;
-  grid-template-columns: ${contentMargin} minmax(0, 1fr) ${contentMargin};
+  grid-template-columns: minmax(16px, ${contentMargin}) 1fr minmax(16px, ${contentMargin});
+
+  @media (max-width: 480px) {
+    grid-template-columns: 16px 1fr 16px;
+  }
 `;
 
 export const contentGridColumn = css`
@@ -26,6 +30,16 @@ export const contentGridBleed = css`
   grid-column: 1/4;
 `;
 
+export const featuredNFTGrid = css`
+  display: grid;
+  grid-template-columns: minmax(0, ${contentMargin}) auto auto minmax(0, ${contentMargin});
+  grid-template-rows: auto auto;
+
+  @media (max-width: 1024px) {
+    grid-template-columns: minmax(0, 32px) auto auto minmax(0, 32px);
+  }
+`;
+
 // Styles
 
 export const label = css`
@@ -34,6 +48,11 @@ export const label = css`
   font-size: 20px;
   letter-spacing: 0.03em;
   text-transform: uppercase;
+
+  @media (max-width: 1024px) {
+    font-size: 16px;
+    letter-spacing: 0.02em;
+  }
 `;
 
 export const link = css`
@@ -42,10 +61,31 @@ export const link = css`
   font-size: 14px;
   letter-spacing: 0.03em;
   text-transform: uppercase;
+
+  @media (max-width: 768px) {
+    font-size: 12px;
+    letter-spacing: 0.01em;
+  }
 `;
 
 // Global fonts
 
 export const headlineFont = css`
   font-family: EditorialNew;
+`;
+
+// Helpers
+
+export const onlyMobile = css`
+  display: none;
+  @media (max-width: 480px) {
+    display: initial;
+  }
+`;
+
+export const hideMobile = css`
+  display: initial;
+  @media (max-width: 480px) {
+    display: none;
+  }
 `;
