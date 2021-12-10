@@ -11,16 +11,9 @@ const container = css`
   margin-top: 100px;
 
   @media (max-width: 480px) {
-    margin-top: 24px;
+    margin-top: 48px;
   }
 `;
-
-const title = css`
-  @media (max-width: 480px) {
-    text-align: center;
-  }
-`;
-
 const logos = css`
   margin-top: 60px;
   display: flex;
@@ -30,14 +23,8 @@ const logos = css`
   max-width: 560px;
 
   @media (max-width: 768px) {
-    margin-top: 32px;
-    max-width: 400px;
-  }
-
-  @media (max-width: 480px) {
-    margin-top: 14px;
-    flex-flow: column nowrap;
-    max-width: initial;
+    margin-top: 24px;
+    max-width: 300px;
   }
 `;
 
@@ -51,7 +38,7 @@ const logo = css`
 
   @media (max-width: 480px) {
     margin-top: 12px;
-    height: 13px;
+    height: 12px;
   }
 `;
 
@@ -63,7 +50,7 @@ const delphi = css`
   }
 
   @media (max-width: 480px) {
-    height: 11px;
+    height: 12px;
   }
 `;
 
@@ -82,7 +69,7 @@ const icv = css`
 const Funding = () => {
   return (
     <div css={container}>
-      <h1 css={[title, label]}>funding and support</h1>
+      <h1 css={label}>funding and support</h1>
       <div css={logos}>
         <a href="https://www.ideocolab.com/"><img css={[logo, icv]} src={icvImg} /></a>
         <a href="https://delphidigital.io/labs"><img css={[logo, delphi]} src={delphiImg} /></a>

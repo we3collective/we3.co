@@ -75,20 +75,25 @@ const copy = css`
   }
 
   @media (max-width: 480px) {
-    font-size: 22px;
+    font-size: 32px;
   }
 `;
 
 const para = css`
-  margin-top: 48px;
+  &:not(:first-of-type) {
+    margin-top: 48px;
+  }
 
   @media (max-width: 768px) {
-    margin-top: 32px;
+    &:not(:first-of-type) {
+      margin-top: 48px;
+    }
   }
 
   @media (max-width: 480px) {
-    text-align: center;
-    margin-top: 24px;
+    &:not(:first-of-type) {
+      margin-top: 48px;
+    }
   }
 `;
 

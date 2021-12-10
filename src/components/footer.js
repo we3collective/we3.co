@@ -14,16 +14,12 @@ const footer = css`
   margin-top: 94px;
   background: #000000;
   color: #ffffff;
-  height: 266px;
 
   @media (max-width: 768px) {
-    margin-top: 48px;
-    height: 96px;
   }
 
   @media (max-width: 480px) {
     margin-top: 32px;
-    height: 74px;
   }
 `;
 
@@ -31,6 +27,11 @@ const container = css`
   display: grid;
   grid-template-columns: 1fr auto;
   align-items: center;
+
+  @media (max-width: 480px) {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto;
+  }
 `;
 
 const email = css`
@@ -39,11 +40,13 @@ const email = css`
   font-weight: 300;
 
   @media (max-width: 768px) {
-    font-size: 24px;
   }
 
   @media (max-width: 480px) {
-    font-size: 18px;
+    font-size: 40px;
+    grid-row: 2/3;
+    text-align: center;
+    margin: 48px 0px;
   }
 `;
 
@@ -64,6 +67,9 @@ const twitterItem = css`
   }
 
   @media (max-width: 480px) {
+    grid-column: 1/2;
+    grid-row: 1/2;
+    margin-top: 48px;
     & p {
       margin-top: 4px;
     }
@@ -71,36 +77,14 @@ const twitterItem = css`
 `;
 
 const twitterIcon = css`
-  height: 103px;
-  fill: #ffffff;
+  height: 70px;
+  fill: rgba(0,0,0,0);
   stroke: #ffffff;
   transition: all 250ms;
 
   &:hover {
-    fill: rgba(0,0,0,0);
+    fill: #ffffff;
     transition: all 250ms;
-  }
-
-  @media (max-width: 768px) {
-    height: 24px;
-  }
-
-  @media (max-width: 480px) {
-    height: 20px;
-  }
-`;
-
-export const onlyMobile = css`
-  display: none;
-  @media (max-width: 768px) {
-    display: initial;
-  }
-`;
-
-export const hideMobile = css`
-  display: initial;
-  @media (max-width: 768px) {
-    display: none;
   }
 `;
 

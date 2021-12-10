@@ -11,12 +11,17 @@ import { link, contentMargin, featuredNFTGrid } from '../css/global';
 const nfts = [nft0, nft1, nft2];
 const creators = ['charlota.eth', 'Sneha Sanks', 'Sneha Sanks'];
 
+const container = css`
+  margin-top: 48px;
+`;
+
 const featuredNFT = css`
   grid-column: 1/5;
   grid-row: 1/3;
 
   @media (max-width: 480px) {
     grid-column: 1/4;
+    grid-row: 1/3;
   }
 `;
 
@@ -40,9 +45,10 @@ const artistContainer = css`
   }
 
   @media (max-width: 480px) {
-    font-size: 8px;
-    padding: 6px 10px;
-    grid-column: 2/3;
+    font-size: 10px;
+    padding: 4px 7px;
+    grid-column: 3/4;
+    grid-row: 3/4;
   }
 `;
 
@@ -75,7 +81,7 @@ class FeaturedNFT extends React.Component {
 
   render() {
     return (
-      <div css={featuredNFTGrid}>
+      <div css={[container, featuredNFTGrid]}>
         <div css={featuredNFT}>
           <div><img css={featuredNFTImg} src={this.state.nft}></img></div>
         </div>
