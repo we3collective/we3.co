@@ -1,7 +1,7 @@
 import * as React from 'react';
 import { css } from '@emotion/react';
 
-import { label, headlineFont, hideMobile } from '../css/global';
+import { headlineFont, hideMobile } from '../css/global';
 
 import we3LogoImg from '../images/logos/we3Vertical.svg';
 import twitterImg from '../images/logos/twitter.svg';
@@ -24,16 +24,6 @@ const header = css`
   @media (max-width: 480px) {
     grid-template-columns: 1fr auto 1fr;
     grid-template-rows: auto auto;
-  }
-`;
-
-const title = css`
-  grid-column: 1/2;
-
-  @media (max-width: 480px) {
-    grid-column: 2/3;
-    grid-row: 2/3;
-    text-align: center;
   }
 `;
 
@@ -114,7 +104,6 @@ const WhoWeAre = () => {
     <div css={container}>
       
       <div css={header}>
-        <h1 css={[title, label]}>who we are</h1>
         <div css={[socialLinks, hideMobile]}>
           <a href="https://twitter.com/WE3co">
             <img css={socialIcon} src={twitterImg} />
