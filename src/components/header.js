@@ -67,6 +67,26 @@ const title = css`
 const join = css`
   grid-column: 5 / 6;
   min-width: max-content;
+  transition: all 250ms;
+
+  padding: 10px 30px;
+  margin-bottom: 5px;
+
+  &:hover {
+    transition: all 250ms;
+    color: #ffffff;
+    background: #000000;
+  }
+
+  @media (max-width: 1024px) {
+    padding: 9px 26px;
+    margin-bottom: 0px;
+  }
+
+  @media (max-width: 480px) {
+    padding: 9px 22px;
+    margin-bottom: 0px;
+  }
 `;
 
 const HeaderComponent = () => {
