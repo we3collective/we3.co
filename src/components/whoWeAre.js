@@ -65,13 +65,14 @@ const copy = css`
   font-size: 54px;
   font-weight: 300;
   line-height: 130%;
+  margin-right: 48px;
 
   @media (max-width: 1024px) {
     font-size: 40px;
   }
 
   @media (max-width: 768px) {
-    font-size: 25px;
+
   }
 
   @media (max-width: 480px) {
@@ -82,18 +83,6 @@ const copy = css`
 const para = css`
   &:not(:first-of-type) {
     margin-top: 48px;
-  }
-
-  @media (max-width: 768px) {
-    &:not(:first-of-type) {
-      margin-top: 48px;
-    }
-  }
-
-  @media (max-width: 480px) {
-    &:not(:first-of-type) {
-      margin-top: 48px;
-    }
   }
 `;
 

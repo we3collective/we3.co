@@ -12,6 +12,8 @@ import {
 
 const footer = css`
   margin-top: 94px;
+  padding-top: 80px;
+  padding-bottom: 63px;
   background: #000000;
   color: #ffffff;
 

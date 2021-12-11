@@ -11,10 +11,6 @@ import { link, contentMargin, featuredNFTGrid } from '../css/global';
 const nfts = [nft0, nft1, nft2];
 const creators = ['charlota.eth', 'Sneha Sanks', 'Sneha Sanks'];
 
-const container = css`
-  margin-top: 48px;
-`;
-
 const featuredNFT = css`
   grid-column: 1/5;
   grid-row: 1/3;
@@ -81,7 +77,7 @@ class FeaturedNFT extends React.Component {
 
   render() {
     return (
-      <div css={[container, featuredNFTGrid]}>
+      <div css={featuredNFTGrid}>
         <div css={featuredNFT}>
           <div><img css={featuredNFTImg} src={this.state.nft}></img></div>
         </div>
