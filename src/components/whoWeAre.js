@@ -115,9 +115,9 @@ const WhoWeAre = () => {
 
       <div css={body}>
         <div css={[copy, headlineFont]}>
-          <p css={para}>We’re a new kind of design organization, partnering with ambitious teams to work on the next internet.</p>
-          <p css={para}>We believe internet platforms should be more participative, open, and community owned.</p>
-          <p css={para}>We bring excellence of craft, willingness to experiment, and a passion for building.</p>
+          <p css={para}>We’re a new kind of design organization partnering with ambitious teams to work on the future of the internet.</p>
+          <p css={para}>We believe internet platforms should be more participative, open,<br/>and community owned.</p>
+          <p css={para}>We bring excellence of craft, willingness to experiment,<br />and a passion for building.</p>
         </div>
         <div css={[logoContainer, hideMobile]}>
           <img css={logo} src={we3LogoImg} />

@@ -15,7 +15,11 @@ export const pageGridColumn = css`
 
 export const contentGrid = css`
   display: grid;
-  grid-template-columns: minmax(16px, ${contentMargin}) 1fr minmax(16px, ${contentMargin});
+  grid-template-columns: 0px 1fr 0px;
+
+  @media (max-width: 1440px) {
+    grid-template-columns: minmax(16px, ${contentMargin}) 1fr minmax(16px, ${contentMargin});
+  }
 
   @media (max-width: 768px) {
     grid-template-columns: 32px 1fr 32px;
