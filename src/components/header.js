@@ -11,13 +11,6 @@ const header = css`
   grid-template-rows: 154px;
   align-items: center;
 
-  @media (max-width: 1024px) {
-
-  }
-
-  @media (max-width: 768px) {
-  }
-
   @media (max-width: 1200px) {
     margin-top: 24px;
     margin-bottom: 48px;
@@ -29,14 +22,6 @@ const header = css`
 const logo = css`
   grid-column: 1/2;
   height: 36px;
-
-  @media (max-width: 1024px) {
-
-  }
-
-  @media (max-width: 768px) {
-
-  }
 
   @media (max-width: 1200px) {
     grid-row: 1/2;
@@ -52,13 +37,6 @@ const title = css`
     font-weight: 300;
     font-size: 40px;
     line-height: 130%;
-  }
-
-  @media (max-width: 1024px) {
-  }
-
-  @media (max-width: 768px) {
-    min-width: auto;
   }
 
   @media (max-width: 1200px) {
@@ -85,9 +63,6 @@ const join = css`
     background: #000000;
   }
 
-  @media (max-width: 1024px) {
-  }
-
   @media (max-width: 1200px) {
     grid-row: 1/2;
     grid-column: 3/4;
@@ -97,17 +72,27 @@ const join = css`
   }
 `;
 
-export const onlyNarrow = css`
+export const oneLine = css`
   display: none;
-  @media (max-width: 768px) {
+
+  @media (min-width: 1200px) {
     display: initial;
   }
 `;
 
-export const hideNarrow = css`
-  display: initial;
-  @media (max-width: 768px) {
-    display: none;
+export const twoLines = css`
+  display: none;
+
+  @media (min-width: 480px) and (max-width: 1200px) {
+    display: initial;
+  }
+`;
+
+export const threeLines = css`
+  display: none;
+
+  @media (max-width: 480px) {
+    display: initial;
   }
 `;
 
@@ -115,10 +100,14 @@ const HeaderComponent = () => {
   return (
     <div css={header}>
       <img css={logo} src={we3Logo}></img>
-      <div css={[title, headlineFont, hideNarrow]}>
+      <div css={[title, headlineFont, oneLine]}>
         <h1>We are a design collective building the Web3</h1>
       </div>
-      <div css={[title, headlineFont, onlyNarrow]}>
+      <div css={[title, headlineFont, twoLines]}>
+        <h1>We are a design collective</h1>
+        <h1>building the Web3</h1>
+      </div>
+      <div css={[title, headlineFont, threeLines]}>
         <h1>We are</h1>
         <h1>a design collective</h1>
         <h1>building the Web3</h1>

@@ -17,9 +17,6 @@ const footer = css`
   background: #000000;
   color: #ffffff;
 
-  @media (max-width: 768px) {
-  }
-
   @media (max-width: 480px) {
     margin-top: 32px;
   }
@@ -40,9 +37,6 @@ const email = css`
   grid-column: 1/2;
   font-size: 60px;
   font-weight: 300;
-
-  @media (max-width: 768px) {
-  }
 
   @media (max-width: 480px) {
     font-size: 40px;
