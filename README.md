@@ -1,6 +1,6 @@
-# gatsby
+# WE3 landing page
 
-Needs Node 16
+Requires Node 16
 
 To deploy:
 `npm run deploy`
