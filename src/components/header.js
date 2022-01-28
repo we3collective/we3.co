@@ -112,7 +112,7 @@ const HeaderComponent = () => {
         <h1>a design collective</h1>
         <h1>building the Web3</h1>
       </div>
-      <h2 css={[join, label]}><a href="https://hello.we3.co">join us</a></h2>
+      <h2 css={[join, label]}><a href="https://we3.notion.site/Community-Careers-WE3-70cbfdd998b4405caf1a1ea39360e580">join us</a></h2>
     </div>
   )
 }
